@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariful Hussain - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Space Background -->
+    <div class="space-background">
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="planet planet-3"></div>
+        <!-- Stars will be added dynamically via JavaScript -->
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="logo-text">AH</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><button id="theme-toggle"><i class="fas fa-sun"></i></button></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <p class="subtitle">Hello, I'm</p>
+            <h1 class="name">Ariful Hussain</h1>
+            <h2 class="title">Software Developer</h2>
+            <p class="description">
+                Full stack developer specializing in creative digital solutions from Planet Earth
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a proactive software developer from planet Earth with a passion for building innovative applications. My hands-on experience spans both front-end and back-end technologies, enabling me to build complete web applications.</p>
+                    <p>I thrive in team environments and enjoy solving complex problems with creative solutions. My goal is to develop robust software that delivers exceptional user experiences while maintaining clean, efficient code.</p>
+                </div>
+                <div class="skills">
+                    <div class="technical-skills">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Python, C, JavaScript</li>
+                            <li>HTML5, CSS3, Bootstrap</li>
+                            <li>Git, MySQL, MongoDB</li>
+                            <li>Flask, Django, OpenCV</li>
+                        </ul>
+                    </div>
+                    <div class="additional-skills">
+                        <h3>Additional Skills</h3>
+                        <ul>
+                            <li>UI/UX Design, Figma, Blender</li>
+                            <li>Database Management Systems</li>
+                            <li>Object Oriented Programming</li>
+                            <li>Problem Solving, Team Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>IBM - Cybersecurity</h3>
+                        <p>Professional certification in cybersecurity fundamentals and practices</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Codesoft - Python Programming</h3>
+                        <p>Advanced Python programming and software development</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Infosys Springboard</h3>
+                        <p>Python for Data Science/Javascript specialization</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>ICT Academy</h3>
+                        <p>Artificial Intelligence certification and training</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <div class="education-year">2021 - 2025</div>
+                    <div class="education-content">
+                        <h3>Bachelor of Technology</h3>
+                        <p class="institution">Kaziranga University</p>
+                        <p class="description">Currently pursuing B.Tech with focus on Computer Science and Engineering</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-year">2019 - 2021</div>
+                    <div class="education-content">
+                        <h3>Higher Secondary (Class XII)</h3>
+                        <p class="institution">Euclid Group of Institutions</p>
+                        <p class="description">Completed Class 12 with focus on Science and Mathematics</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-year">Until 2019</div>
+                    <div class="education-content">
+                        <h3>Secondary Education</h3>
+                        <p class="institution">SERS Public School</p>
+                        <p class="description">Completed primary and secondary education with excellent academic record</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-description">A selection of my most recent and impactful work</p>
+            <div class="projects-grid">
+                <!-- Project cards will be added dynamically via JavaScript -->
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn primary">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>arifulhussain009@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Guwahati, Assam 781354</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 8099990854</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Connect With Me</h3>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Me a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add EmailJS Script before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("gz0EN4VVd34fw8f7v");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
