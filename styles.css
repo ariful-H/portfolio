@@ -431,6 +431,10 @@ nav:hover {
     margin-bottom: 3rem;
 }
 
+.project-card-link {
+    display: contents;
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -853,11 +857,14 @@ html {
     }
 
     .education-year {
-        left: 0;
+        position: static;
+        left: auto;
         width: auto;
         text-align: left;
-        padding-left: 70px;
+        padding-left: 0;
         padding-right: 0;
+        margin-bottom: 0.5rem;
+        display: block;
     }
 
     .education-content {

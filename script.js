@@ -5,28 +5,32 @@ const projects = [
         description: "Advanced plant disease detection system using neural networks and pre-trained models for accurate diagnosis and treatment recommendations.",
         image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "TensorFlow", "Neural Networks", "OpenCV"],
-        category: "AI"
+        category: "AI",
+        link: "#"
     },
     {
         title: "Quantum Gaze",
         description: "Gesture controlled video streaming platform with face detection for hands-free navigation.",
         image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "Flask", "OpenCV", "MediaPipe"],
-        category: "AI"
+        category: "AI",
+        link: "https://geststreamg-8vtj794q.manus.space"
     },
     {
         title: "Restaurant Menu System",
         description: "Responsive restaurant website with dynamic menus and real-time reservation system.",
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-        category: "Web App"
+        category: "Web App",
+        link: "https://v0-new-project-kc6mfhwt4da.vercel.app/"
     },
     {
         title: "To-Do List Application",
         description: "Interactive task management application with front-end development focus.",
         image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["JavaScript", "HTML", "CSS"],
-        category: "Web App"
+        category: "Web App",
+        link: "https://tasktopia-glow.lovable.app/"
     },
     {
         title: "Password Generator",
@@ -167,16 +171,18 @@ themeToggle.addEventListener('click', toggleTheme);
 // Enhanced Project Card Rendering with Stagger Effect
 function renderProjects() {
     projectsGrid.innerHTML = projects.map((project, index) => `
-        <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0;">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
-            <div class="project-info">
-                <h3 class="project-title">${project.title}</h3>
-                <p class="project-description">${project.description}</p>
-                <div class="project-tags">
-                    ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-card-link" style="text-decoration: none;">
+            <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0;">
+                <img src="${project.image}" alt="${project.title}" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     `).join('');
 }
 
