@@ -431,6 +431,10 @@ nav:hover {
     margin-bottom: 3rem;
 }
 
+.project-card-link {
+    display: contents;
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 12px;
