@@ -38,7 +38,7 @@ const projects = [
         image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "Tkinter"],
         category: "Security",
-        disabled: true
+        link: null
     },
     {
         title: "SQL Injection Scanner",
@@ -46,7 +46,7 @@ const projects = [
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "SQLAlchemy", "Web Security"],
         category: "Security",
-        disabled: true
+        link: null
     },
     {
         title: "MediVision App",
@@ -173,10 +173,10 @@ themeToggle.addEventListener('click', toggleTheme);
 // Enhanced Project Card Rendering with Stagger Effect
 function renderProjects() {
     projectsGrid.innerHTML = projects.map((project, index) => {
-        if (project.disabled) {
+        if (project.link === null) {
             return `
-                <div class="project-card-link disabled" style="text-decoration: none; cursor: not-allowed; opacity: 0.6;">
-                    <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0; pointer-events: none;">
+                <div class="project-card-link" style="text-decoration: none;">
+                    <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0;">
                         <img src="${project.image}" alt="${project.title}" class="project-image">
                         <div class="project-info">
                             <h3 class="project-title">${project.title}</h3>
