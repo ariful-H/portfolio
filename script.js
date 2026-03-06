@@ -6,7 +6,7 @@ const projects = [
         image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "TensorFlow", "Neural Networks", "OpenCV"],
         category: "AI",
-        link: "#"
+        link: "https://v0-descease-detector.vercel.app/"
     },
     {
         title: "Quantum Gaze",
@@ -37,14 +37,16 @@ const projects = [
         description: "Secure password generation tool with customizable criteria and enhanced security.",
         image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "Tkinter"],
-        category: "Security"
+        category: "Security",
+        disabled: true
     },
     {
         title: "SQL Injection Scanner",
         description: "Advanced web vulnerability scanner focused on detecting and preventing SQL injection attacks.",
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         tags: ["Python", "SQLAlchemy", "Web Security"],
-        category: "Security"
+        category: "Security",
+        disabled: true
     },
     {
         title: "MediVision App",
@@ -170,20 +172,38 @@ themeToggle.addEventListener('click', toggleTheme);
 
 // Enhanced Project Card Rendering with Stagger Effect
 function renderProjects() {
-    projectsGrid.innerHTML = projects.map((project, index) => `
-        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-card-link" style="text-decoration: none;">
-            <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0;">
-                <img src="${project.image}" alt="${project.title}" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.description}</p>
-                    <div class="project-tags">
-                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+    projectsGrid.innerHTML = projects.map((project, index) => {
+        if (project.disabled) {
+            return `
+                <div class="project-card-link disabled" style="text-decoration: none; cursor: not-allowed; opacity: 0.6;">
+                    <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0; pointer-events: none;">
+                        <img src="${project.image}" alt="${project.title}" class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">${project.title}</h3>
+                            <p class="project-description">${project.description}</p>
+                            <div class="project-tags">
+                                ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-    `).join('');
+            `;
+        }
+        return `
+            <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-card-link" style="text-decoration: none;">
+                <div class="project-card" style="animation: fadeInUp 0.5s ease forwards ${index * 0.1}s; opacity: 0;">
+                    <img src="${project.image}" alt="${project.title}" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-tags">
+                            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        `;
+    }).join('');
 }
 
 // Enhanced Navigation with Smooth Scroll
